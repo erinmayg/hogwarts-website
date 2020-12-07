@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SlytherinHouse from './SlytherinHouse';
 import SlytherinFounder from './SlytherinFounder';
+import CharacterPage from './CharacterPage';
 
 function Slytherin() {
   useEffect(() => {
@@ -38,22 +39,55 @@ function Slytherin() {
         y: 150,
         stagger: 0.5,
       })
-      .to(
-        '.founderContent',
-        {
-          yPercent: -50,
-        },
-        '-=1'
-      )
       .set(
         '.founderSection',
+        {
+          position: 'fixed',
+          top: '0',
+        },
+        '-=1'
+      );
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.houseSection',
+        start: 'center 20%',
+        toggleActions: 'restart none none reverse pause',
+        // scrub: true,
+        markers: true,
+      },
+    });
+
+    tl2
+      .to('.founderContent', {
+        opacity: 0,
+        y: -150,
+        stagger: 0.25,
+      })
+      .from('.characterContent', {
+        opacity: 0,
+        y: 150,
+        stagger: 0.5,
+      })
+      .set(
+        '.characterSection',
         {
           position: 'fixed',
           top: '0',
           left: '0',
         },
         '-=1'
-      );
+      )
+      .set(
+        '.background',
+        {
+          position: 'fixed',
+          top: '0',
+          opacity: 0,
+        },
+        '-=1'
+      )
+      .to('.background', { opacity: 1, duration: 1.5, ease: 'into' });
   }, []);
 
   window.onbeforeunload = function () {
@@ -64,6 +98,7 @@ function Slytherin() {
     <div className='slytherin page'>
       <SlytherinHouse />
       <SlytherinFounder />
+      <CharacterPage />
     </div>
   );
 }
