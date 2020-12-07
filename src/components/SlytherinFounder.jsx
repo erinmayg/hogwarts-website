@@ -4,11 +4,12 @@ import FounderCard from './FounderCard';
 import card from '../images/card.png';
 import founder from '../images/salazar.png';
 import founderName from '../images/salazarName.png';
+import { ReactComponent as Snake } from '../svg/snake.svg';
 
 function SlytherinFounder() {
   return (
     <div className='fullscreen founder'>
-      <div className='founderSection'>
+      <div className='founderSection z-10'>
         <FounderCard card={card} founder={founder} founderName={founderName} />
         <div className='founderData founderContent'>
           <h1>
@@ -22,6 +23,10 @@ function SlytherinFounder() {
             <h1>READ MORE</h1>
           </button>
         </div>
+      </div>
+      <div class='decor'>
+        <div class='block'></div>
+        <Snake />
       </div>
     </div>
   );

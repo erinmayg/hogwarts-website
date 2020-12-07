@@ -3,7 +3,7 @@ import '../App.css';
 import CharacterCard from './CharacterCard';
 import voldemort from '../images/voldemort.png';
 import slytherin from '../images/slytherincard.png';
-import voldemortwallp from '../images/voldemortwallp.jpg';
+import voldemortwallp from '../images/voldemortwallp.png';
 
 function CharacterPage() {
   return (
