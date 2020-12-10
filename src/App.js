@@ -1,11 +1,13 @@
 import './App.css';
-import Slytherin from './components/Slytherin';
+import HogwartsHouses from './components/HogwartsHouses';
+import Hogwarts from './components/Hogwarts';
 import Nav from './components/Nav';
 
 function App() {
   return (
     <div className='App'>
-      <Slytherin />
+      {/* <Hogwarts /> */}
+      <HogwartsHouses />
     </div>
   );
 }
