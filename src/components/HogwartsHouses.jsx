@@ -114,7 +114,7 @@ function HogwartsHouses() {
   };
 
   return (
-    <div className='page flex'>
+    <div className='flex'>
       <HogwartsHouse house={gryffindor} />
       <HogwartsHouse house={hufflepuff} />
       <HogwartsHouse house={ravenclaw} />

@@ -3,10 +3,10 @@ import '../App.css';
 
 function FounderCard(props) {
   useEffect(() => {
-    const card = document.querySelector('.founderCard');
-    const container = document.querySelector('.container');
-    const founder = document.querySelector('.z-20');
-    const name = document.querySelector('.z-30');
+    const card = document.querySelector('.' + props.house + 'FounderCard');
+    const container = document.querySelector('.' + props.house + 'Container');
+    const founder = document.querySelector('.' + props.house + '-20');
+    const name = document.querySelector('.' + props.house + '-30');
 
     container.addEventListener('mousemove', (e) => {
       let xAxis = window.innerWidth / 2 - e.pageX;
@@ -32,11 +32,31 @@ function FounderCard(props) {
   });
 
   return (
-    <div className='container'>
-      <div className='founderCard founderContent'>
-        <img src={props.card} alt='Slytherin Card' className='z-10' />
-        <img src={props.founder} alt='Salazar Slytherin' className='z-20' />
-        <img src={props.founderName} alt='Salazar Slytherin' className='z-30' />
+    <div className={'container ' + props.house + 'Container'}>
+      <div
+        className={
+          'founderCard founderContent ' +
+          props.house +
+          'FounderContent ' +
+          props.house +
+          'FounderCard '
+        }
+      >
+        <img
+          src={props.card}
+          alt='Slytherin Card'
+          className={'z-10 ' + props.house + '-10'}
+        />
+        <img
+          src={props.founder}
+          alt='Salazar Slytherin'
+          className={'z-20 ' + props.house + '-20'}
+        />
+        <img
+          src={props.founderName}
+          alt='Salazar Slytherin'
+          className={'z-30 ' + props.house + '-30'}
+        />
       </div>
     </div>
   );

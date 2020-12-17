@@ -8,6 +8,22 @@
   padding: 0px;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.page {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  flex-shrink: 0;
+  /* position: relative; */
+}
+
 .fullscreen {
   height: 100vh;
   overflow: hidden;
@@ -15,15 +31,15 @@
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
-}
-
-.page {
-  overflow-x: hidden;
-  flex-shrink: 0;
+  position: relative;
 }
 
 .flex {
   display: flex;
+  flex-direction: row;
+  flex: none;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
 }
 
 .hogwartsSection {
@@ -98,7 +114,7 @@
   height: 100%;
   padding: 1rem;
   font-family: 'Texturina', serif;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .houseSection .houseName {
@@ -144,17 +160,17 @@
 }
 
 .founderSection {
-  perspective: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   padding: 1rem;
+  perspective: 1000px;
 }
 
 .founderCard {
-  max-width: 50vw;
+  max-width: 50%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -163,7 +179,6 @@
 }
 
 .founderCard img {
-  max-width: 50vw;
   max-height: 50vh;
   margin: auto;
   transition: all 0.5s ease-out;
@@ -189,37 +204,6 @@
   font-weight: bold;
   line-height: 1;
   margin-right: 0.5rem;
-}
-
-.readMore {
-  background-color: transparent;
-  border: none;
-  font-family: 'Texturina', serif;
-  font-weight: lighter;
-  text-transform: uppercase;
-  font-size: larger;
-  cursor: pointer;
-  padding: 1rem;
-  position: relative;
-  display: inline-block;
-}
-
-.readMore::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  transition: width 0.3s ease;
-}
-
-.readMore:hover::after {
-  width: 100%;
-  transition: width 0.3s ease;
-}
-
-.readMore:focus {
-  border: none;
-  outline: none;
 }
 
 .notableCharactersSection {
@@ -312,7 +296,7 @@
 }
 
 .lion {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   opacity: 0.1;
@@ -320,7 +304,7 @@
 }
 
 .badger {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   opacity: 0.1;
@@ -343,7 +327,7 @@
   transform: rotate(120deg);
 }
 
-.characterSection {
+/* .characterSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -387,7 +371,7 @@
   margin-top: -40%;
   margin-bottom: -2%;
   max-height: 50vh;
-}
+} */
 
 .background {
   object-fit: cover;
@@ -445,16 +429,16 @@
 
   .snake {
     transform: scaleX(1) rotate(-35deg);
-    position: fixed;
+    position: absolute;
     height: 100vh;
     margin-top: -5%;
-    margin-left: -18vw;
+    margin-left: -18%;
     top: 0;
     left: 0;
   }
 
   .eagle {
-    position: fixed;
+    position: absolute;
     height: 80vh;
     top: 0;
     left: 0;
@@ -464,7 +448,7 @@
 
   .lion {
     height: 100vh;
-    margin-top: 0;
+    margin: 0;
   }
 
   .badger {
@@ -473,8 +457,9 @@
   }
 
   .block {
+    position: absolute;
     margin-top: 0;
-    width: 45vw;
+    width: 45%;
     height: 100vh;
     left: 0;
   }

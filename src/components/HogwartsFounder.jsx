@@ -5,20 +5,18 @@ import FounderCard from './FounderCard';
 function HogwartsFounder(props) {
   return (
     <div className='fullscreen founder'>
-      <div className='founderSection z-10'>
+      <div className={'founderSection z-10 ' + props.house + 'FounderSection'}>
         <FounderCard
           card={props.card}
           founder={props.founder}
           founderName={props.founderName}
+          house={props.house}
         />
-        <div className='founderData founderContent'>
+        <div className={'founderData ' + props.house + 'FounderContent'}>
           <h1>{props.bio}</h1>
-          <button className={'readMore bg' + props.color}>
-            <h1>READ MORE</h1>
-          </button>
         </div>
       </div>
-      <div class='decor'>
+      <div class={'decor ' + props.house + 'Decor'}>
         <div class={'block dark' + props.color}></div>
         {props.houseAnimal}
       </div>
