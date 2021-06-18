@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 * {
   color: white;
@@ -12,7 +11,12 @@
   display: none;
 }
 
-.page {
+.page,
+.housePage,
+.slytherinHousePage,
+.gryffindorHousePage,
+.hufflepuffHousePage,
+.ravenclawHousePage {
   overflow-x: hidden;
   height: 100vh;
   width: 100vw;
@@ -21,83 +25,14 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   flex-shrink: 0;
-  /* position: relative; */
+  position: relative;
 }
 
 .fullscreen {
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   scroll-snap-align: start;
   position: relative;
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex: none;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-}
-
-.hogwartsSection {
-  background-image: url('./images/hogwarts.png');
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hogwartsCrest {
-  height: 40vh;
-  object-fit: contain;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.hogwartsCrest img {
-  height: 100%;
-  position: absolute;
-  animation: float 4s ease-in-out infinite;
-}
-
-.hogwartsCrestglow {
-  opacity: 0;
-}
-
-.hogwartsCrestglow:hover {
-  opacity: 0.8;
-  transition: all 0.8s ease-in-out;
-}
-
-.hogwartsSection h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'Playfair Display SC', serif;
-  letter-spacing: 0.2rem;
-}
-
-.hogwartsSection h2 {
-  font-size: large;
-  font-family: 'Playfair Display SC', serif;
-  letter-spacing: 0.2rem;
-  font-weight: light;
-}
-
-.hogwartsSection h3 {
-  margin-top: 4rem;
-  text-transform: uppercase;
-  font-weight: lighter;
-  letter-spacing: 0.2rem;
-  color: rgb(237, 206, 255);
 }
 
 .houseIcon {
@@ -114,7 +49,6 @@
   height: 100%;
   padding: 1rem;
   font-family: 'Texturina', serif;
-  /* position: fixed; */
 }
 
 .houseSection .houseName {
@@ -206,65 +140,6 @@
   margin-right: 0.5rem;
 }
 
-.notableCharactersSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.notableCharactersTitle {
-  display: none;
-}
-
-.bookmarks {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: left;
-}
-
-.bookmark {
-  width: 100%;
-  height: 30vh;
-  margin: 1rem;
-}
-
-.bookmarkImage {
-  width: 60%;
-  height: 25vh;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-}
-
-.bookmarkImage-alt {
-  width: 60%;
-  height: 25vh;
-  object-fit: cover;
-  position: absolute;
-  right: 0;
-}
-
-.characterName {
-  margin-left: -20%;
-  margin-top: 25%;
-  position: absolute;
-  z-index: 10;
-  font-family: 'Texturina', serif;
-  font-variant: small-caps;
-  text-align: left;
-}
-
-.characterName-alt {
-  margin-left: -20%;
-  margin-top: 25%;
-  position: absolute;
-  z-index: 10;
-  font-family: 'Texturina', serif;
-  font-variant: small-caps;
-  text-align: right;
-}
-
 .decor {
   position: absolute;
   width: 100%;
@@ -326,52 +201,6 @@
   object-fit: contain;
   transform: rotate(120deg);
 }
-
-/* .characterSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  height: 100vh;
-}
-
-.characterTitle {
-  position: fixed;
-  top: 0;
-  margin-top: 40%;
-}
-
-.characterDetails {
-  font-family: 'Texturina', serif;
-}
-
-.characterDetails h1 {
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
-
-.characterDetails h2 {
-  margin-bottom: 8rem;
-  max-height: 30vh;
-  font-size: large;
-  font-weight: lighter;
-}
-
-.characterCard {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: fit-content;
-  bottom: 0;
-}
-
-.characterCard img {
-  margin-top: -40%;
-  margin-bottom: -2%;
-  max-height: 50vh;
-} */
 
 .background {
   object-fit: cover;
@@ -464,119 +293,12 @@
     left: 0;
   }
 
-  .notableCharactersSection {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .notableCharactersTitle {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    height: 100vh;
-    margin-right: 4rem;
-  }
-
-  .notableCharactersTitle img {
-    width: 100%;
-    padding: 0;
-    object-fit: cover;
-    height: 60vh;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .notableCharactersInfo {
-    margin-top: 1.5rem;
-    padding: 0rem 2rem;
-    height: 100%;
-    font-family: 'Texturina', serif;
-    text-align: left;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    border-left: 4px solid green;
-  }
-
-  .notableCharactersInfo h1 {
-    text-align: left;
-    font-size: 3.5rem;
-    line-height: 1;
-    color: green;
-    font-variant: small-caps;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .notableCharactersInfo h2 {
-    text-align: left;
-    font-weight: lighter;
-    font-size: larger;
-    font-family: 'Texturina', serif;
-    margin-top: 1rem;
-  }
-
   .linesnake {
     display: none;
   }
 
   .lineblock {
     display: none;
-  }
-
-  .bookmark {
-    height: 100vh;
-    width: 30%;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: rgb(0, 5, 0);
-  }
-
-  .bookmarkImage {
-    width: 15vw;
-    height: 100vh;
-    position: static;
-    opacity: 0.6;
-  }
-
-  .bookmarkImage-alt {
-    width: 15vw;
-    height: 100vh;
-    position: static;
-    opacity: 0.6;
-  }
-
-  .bookmarkImage:hover {
-    opacity: 1;
-    transition: all 0.5s ease-in-out;
-    transform: scale(1.01);
-    cursor: pointer;
-  }
-
-  .bookmarkImage-alt:hover {
-    opacity: 1;
-    transition: all 0.5s ease-in-out;
-    transform: scale(1.01);
-    cursor: pointer;
-  }
-
-  .characterName {
-    margin-left: 0;
-    margin-top: -40vh;
-    text-align: center;
-    width: 15vw;
-    opacity: 0.5;
-  }
-
-  .characterName-alt {
-    margin-left: 0;
-    margin-top: -30vh;
-    text-align: center;
-    width: 15vw;
-    opacity: 0.5;
   }
 }
 
@@ -654,10 +376,6 @@
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
-}
-
-.nav {
-  background-color: black;
 }
 
 .opacity-10 {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import HogwartsHouse from './HogwartsHouse';
 import { ReactComponent as SlytherinLogo } from '../svg/slytherin.svg';
 import { ReactComponent as RavenclawLogo } from '../svg/ravenclaw.svg';
@@ -114,7 +114,7 @@ function HogwartsHouses() {
   };
 
   return (
-    <div className='flex'>
+    <div className='page'>
       <HogwartsHouse house={gryffindor} />
       <HogwartsHouse house={hufflepuff} />
       <HogwartsHouse house={ravenclaw} />

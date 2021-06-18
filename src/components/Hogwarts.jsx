@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import hogwartscrest from '../images/hogwartscrest.png';
 import hogwartscrestglow from '../images/hogwartscrest-glow.png';
+import '../scss/hogwarts.scss';
 
 function Hogwarts() {
   useEffect(() => {
@@ -20,7 +21,7 @@ function Hogwarts() {
       });
   }, []);
   return (
-    <div className='fullscreen'>
+    <div className='fullscreen page'>
       <div className='hogwartsSection'>
         <div className='hogwartsCrest hogwartsContent'>
           <img src={hogwartscrest} />

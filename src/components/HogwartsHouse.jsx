@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import HogwartsHouseAbout from './HogwartsHouseAbout';
 import HogwartsFounder from './HogwartsFounder';
-// import Characters from './Characters';
-// import CharacterPage from './CharacterPage';
 
 function HogwartsHouse(props) {
   useEffect(() => {
@@ -18,43 +16,39 @@ function HogwartsHouse(props) {
       delay: 1.0,
       y: 150,
       stagger: 0.25,
+      toggleActions: 'restart none none reverse pause',
     });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.' + props.house.house + 'Section',
-        start: 'center 40%',
+        start: 'center center',
         toggleActions: 'restart none none reverse pause',
-        markers: true,
-        scroller: '.page',
+        scroller: '.' + props.house.house + 'HousePage',
       },
     });
 
-    // tl.to('.' + props.house.house + 'Content', {
-    //   opacity: 0,
-    //   y: -150,
-    //   stagger: 0.25,
-    // })
-    //   .set('.' + props.house.house + 'Decor', {
-    //     position: 'fixed',
-    //     top: '0',
-    //   })
-    tl.from('.' + props.house.house + 'Decor', {
+    tl.to('.' + props.house.house + 'Content', {
+      duration: 0.5,
+      y: -150,
       opacity: 0,
-      x: -150,
-    }).from('.' + props.house.house + 'FounderContent', {
+      stagger: 0.25,
+    });
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.' + props.house.house + 'Section',
+        start: 'center center',
+        toggleActions: 'restart none none reverse pause',
+        scroller: '.' + props.house.house + 'HousePage',
+      },
+    });
+
+    tl2.from('.' + props.house.house + 'FounderContent', {
       opacity: 0,
       y: 150,
       stagger: 0.5,
     });
-    // .set(
-    //   '.' + props.house.house + 'FounderSection',
-    //   {
-    //     position: 'fixed',
-    //     top: '0',
-    //   },
-    //   '-=1'
-    // );
   }, []);
 
   window.onbeforeunload = function () {
@@ -64,7 +58,9 @@ function HogwartsHouse(props) {
   const house = props.house;
 
   return (
-    <div className={'page ' + house.house}>
+    <div
+      className={'housePage ' + house.house + ' ' + house.house + 'HousePage'}
+    >
       <HogwartsHouseAbout
         house={house.house}
         traits={house.traits}

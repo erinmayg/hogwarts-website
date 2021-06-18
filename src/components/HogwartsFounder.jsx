@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import '../App.css';
+import React from 'react';
 import FounderCard from './FounderCard';
 
 function HogwartsFounder(props) {
@@ -15,10 +14,6 @@ function HogwartsFounder(props) {
         <div className={'founderData ' + props.house + 'FounderContent'}>
           <h1>{props.bio}</h1>
         </div>
-      </div>
-      <div class={'decor ' + props.house + 'Decor'}>
-        <div class={'block dark' + props.color}></div>
-        {props.houseAnimal}
       </div>
     </div>
   );
