@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hogwarts-website/static/css/main.5974511b.chunk.css",
-    "main.js": "/hogwarts-website/static/js/main.2a5c4a1f.chunk.js",
-    "main.js.map": "/hogwarts-website/static/js/main.2a5c4a1f.chunk.js.map",
-    "runtime-main.js": "/hogwarts-website/static/js/runtime-main.6749d0d6.js",
-    "runtime-main.js.map": "/hogwarts-website/static/js/runtime-main.6749d0d6.js.map",
+    "main.css": "/hogwarts-website/static/css/main.17be23fc.chunk.css",
+    "main.js": "/hogwarts-website/static/js/main.449e4219.chunk.js",
+    "main.js.map": "/hogwarts-website/static/js/main.449e4219.chunk.js.map",
+    "runtime-main.js": "/hogwarts-website/static/js/runtime-main.f00940c4.js",
+    "runtime-main.js.map": "/hogwarts-website/static/js/runtime-main.f00940c4.js.map",
     "static/js/2.da1ecc9f.chunk.js": "/hogwarts-website/static/js/2.da1ecc9f.chunk.js",
     "static/js/2.da1ecc9f.chunk.js.map": "/hogwarts-website/static/js/2.da1ecc9f.chunk.js.map",
-    "static/js/3.609db349.chunk.js": "/hogwarts-website/static/js/3.609db349.chunk.js",
-    "static/js/3.609db349.chunk.js.map": "/hogwarts-website/static/js/3.609db349.chunk.js.map",
+    "static/js/3.9816a650.chunk.js": "/hogwarts-website/static/js/3.9816a650.chunk.js",
+    "static/js/3.9816a650.chunk.js.map": "/hogwarts-website/static/js/3.9816a650.chunk.js.map",
     "index.html": "/hogwarts-website/index.html",
-    "static/css/main.5974511b.chunk.css.map": "/hogwarts-website/static/css/main.5974511b.chunk.css.map",
+    "static/css/main.17be23fc.chunk.css.map": "/hogwarts-website/static/css/main.17be23fc.chunk.css.map",
     "static/js/2.da1ecc9f.chunk.js.LICENSE.txt": "/hogwarts-website/static/js/2.da1ecc9f.chunk.js.LICENSE.txt",
     "static/media/badger.320b9490.png": "/hogwarts-website/static/media/badger.320b9490.png",
     "static/media/card-gryffindor.898b2587.png": "/hogwarts-website/static/media/card-gryffindor.898b2587.png",
@@ -24,6 +24,7 @@
     "static/media/App.css": "/hogwarts-website/static/media/slytherin.d5b266b7.png",
     "static/media/helga.405d9fda.png": "/hogwarts-website/static/media/helga.405d9fda.png",
     "static/media/helgaName.f583e751.png": "/hogwarts-website/static/media/helgaName.f583e751.png",
+    "static/media/hogwarts.scss": "/hogwarts-website/static/media/hogwarts.df2bddae.png",
     "static/media/hogwartscrest-glow.c1173c15.png": "/hogwarts-website/static/media/hogwartscrest-glow.c1173c15.png",
     "static/media/hogwartscrest.808d6f04.png": "/hogwarts-website/static/media/hogwartscrest.808d6f04.png",
     "static/media/hufflepuff.f842cb00.svg": "/hogwarts-website/static/media/hufflepuff.f842cb00.svg",
@@ -37,9 +38,9 @@
     "static/media/snake.c1b99925.svg": "/hogwarts-website/static/media/snake.c1b99925.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6749d0d6.js",
+    "static/js/runtime-main.f00940c4.js",
     "static/js/2.da1ecc9f.chunk.js",
-    "static/css/main.5974511b.chunk.css",
-    "static/js/main.2a5c4a1f.chunk.js"
+    "static/css/main.17be23fc.chunk.css",
+    "static/js/main.449e4219.chunk.js"
   ]
 }
