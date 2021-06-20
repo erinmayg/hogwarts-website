@@ -3,7 +3,7 @@ import FounderCard from './FounderCard';
 
 function HogwartsFounder(props) {
   return (
-    <div className='fullscreen founder'>
+    <div className='founder'>
       <div className={'founderSection z-10 ' + props.house + 'FounderSection'}>
         <FounderCard
           card={props.card}

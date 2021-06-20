@@ -22,7 +22,7 @@ function HogwartsHouse(props) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.' + props.house.house + 'Section',
-        start: 'center center',
+        start: 'center 40%',
         toggleActions: 'restart none none reverse pause',
         scroller: '.' + props.house.house + 'HousePage',
       },
@@ -38,7 +38,7 @@ function HogwartsHouse(props) {
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: '.' + props.house.house + 'Section',
-        start: 'center center',
+        start: 'center 40%',
         toggleActions: 'restart none none reverse pause',
         scroller: '.' + props.house.house + 'HousePage',
       },
@@ -46,10 +46,10 @@ function HogwartsHouse(props) {
 
     tl2.from('.' + props.house.house + 'FounderContent', {
       opacity: 0,
-      y: 150,
+      y: 200,
       stagger: 0.5,
     });
-  }, []);
+  });
 
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
