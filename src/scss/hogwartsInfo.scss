@@ -1,15 +1,16 @@
 $background-color: #0d0d37;
 $accent: #ffc525;
 
-.hogwartsInfo {
-  background: $background-color;
+.hogwartsInfo,
+.hogwartsInfo--alt {
   display: flex;
-  padding: 4rem 0rem;
-  position: relative;
+  flex-direction: column;
 
   svg {
     color: $accent;
-    width: 100%;
+    width: 70%;
+    height: auto;
+    padding: 1rem;
   }
 
   .hogwartsInfo--pic {
@@ -17,71 +18,55 @@ $accent: #ffc525;
     width: 100%;
     position: relative;
     font-family: 'Playfair Display SC';
-    color: $accent;
 
     img {
-      width: 120%;
-      margin-left: -50%;
+      width: 75%;
     }
 
     .hogwartsInfo--pic--text {
-      position: absolute;
-      top: 0;
       margin-top: -3rem;
-      margin-left: 4rem;
-    }
+      text-align: center;
 
-    h1 {
-      font-size: 4rem;
-      letter-spacing: 0.1em;
-      color: $accent;
-    }
+      h1 {
+        color: $accent;
+        font-size: 3rem;
+        letter-spacing: 0.1em;
+      }
 
-    h2 {
-      color: $accent;
-      margin-left: 8rem;
-      font-weight: 200;
-      letter-spacing: 0.2em;
+      h2 {
+        color: $accent;
+        font-size: 1.2rem;
+        font-weight: 200;
+        letter-spacing: 0.2em;
+      }
     }
 
     svg {
       transform: scaleX(-1);
-      position: absolute;
-      bottom: 15%;
-      left: 0;
-      margin-left: -50%;
+      margin-left: -70%;
     }
   }
 
   .hogwartsInfo--text {
     position: relative;
     width: 100%;
-    margin-left: 4rem;
+    z-index: 2;
 
     h1 {
-      position: relative;
-      z-index: 1;
-
-      text-align: right;
-      font-family: 'Playfair Display SC';
-      font-style: italic;
-      font-size: 5.5rem;
-      margin-top: -2rem;
-      margin-right: 4rem;
-      margin-bottom: 4rem;
+      display: none;
     }
 
     p {
       font-family: 'Texturina';
-      font-size: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
       text-align: left;
-      margin-top: 1rem;
-      margin-right: 10rem;
+      padding: 0rem 2rem;
     }
 
     svg {
-      position: absolute;
-      right: 0;
+      margin-right: -70%;
+      margin-top: -50%;
     }
   }
 
@@ -96,5 +81,137 @@ $accent: #ffc525;
       rgba(13, 13, 55, 0) 0%,
       #000000 100%
     );
+  }
+}
+
+.hogwartsInfo {
+  background: $background-color;
+  position: relative;
+}
+
+.hogwartsInfo--alt {
+  background: url(../images/newspaper.png);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+
+  .hogwartsInfo--pic {
+    .hogwartsInfo--pic--text {
+      h1,
+      h2 {
+        color: white;
+        box-shadow: #000000;
+      }
+    }
+  }
+
+  .hogwartsInfo--text {
+    color: white;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hogwartsInfo,
+  .hogwartsInfo--alt {
+    flex-direction: row;
+    display: flex;
+    padding: 4rem 0rem;
+
+    svg {
+      color: $accent;
+      width: 100%;
+      padding: 0rem;
+    }
+
+    .hogwartsInfo--pic {
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      font-family: 'Playfair Display SC';
+      color: $accent;
+      scale: 1;
+
+      img {
+        width: 110%;
+        margin-left: -50%;
+      }
+
+      .hogwartsInfo--pic--text {
+        position: absolute;
+        top: 0;
+        margin-top: -3rem;
+        margin-left: 4rem;
+        text-align: left;
+
+        h1 {
+          font-size: 4rem;
+          letter-spacing: 0.1em;
+        }
+
+        h2 {
+          margin-left: 8rem;
+          font-weight: 200;
+          letter-spacing: 0.2em;
+        }
+      }
+
+      svg {
+        transform: scaleX(-1);
+        position: absolute;
+        bottom: 15%;
+        left: 0;
+        margin-left: -50%;
+      }
+    }
+
+    .hogwartsInfo--text {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+
+      h1 {
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        text-align: right;
+        font-family: 'Playfair Display SC';
+        font-style: italic;
+        font-size: 5.5rem;
+        margin-top: -2rem;
+        margin-right: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      p {
+        font-family: 'Texturina';
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0 4rem;
+        margin-top: 1rem;
+      }
+
+      svg {
+        display: block;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .hogwartsInfo--alt {
+    display: flex;
+    --mask: radial-gradient(
+      circle at var(--x, 70%) var(--y, 50%),
+      black 25%,
+      transparent 0
+    );
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
   }
 }
