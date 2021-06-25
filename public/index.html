@@ -41,23 +41,18 @@
     -->
   </body>
   <script>
-      const hero = document.querySelector('[data-hero]');
- 
-      window.addEventListener('mousemove', (e) => {
-        
-        const { clientX, clientY } = e;
-        const x = Math.round((clientX / window.innerWidth) * 100);
-        const y = Math.round((clientY / window.innerHeight) * 100);
 
-        hero.style.setProperty('--x', `${x}%`);
-        hero.style.setProperty('--y', `${y}%`);
-      });
+    const hero = document.querySelector('[data-hero]');
 
-      gsap.to(hero, {
-      '--x': `${x}%`,
-      '--y': `${y}%`,
-      duration: 0.3,
-      ease: 'sine.out'
-      })
+    window.addEventListener('mousemove', (e) => {
+      
+      const { clientX, clientY } = e;
+      const x = Math.round((clientX / window.innerWidth) * 100);
+      const y = Math.round((clientY / window.innerHeight) * 100);
+
+      hero.style.setProperty('--x', `${x}%`);
+      hero.style.setProperty('--y', `${y}%`);
+    });
+
   </script>
 </html>

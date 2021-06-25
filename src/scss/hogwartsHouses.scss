@@ -1,0 +1,231 @@
+$green: forestgreen;
+$blue: rgb(0, 81, 255);
+$red: rgb(168, 0, 0);
+$yellow: orange;
+
+.housePage {
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  scroll-snap-type: block mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  position: relative;
+}
+
+.houseSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-family: 'Texturina', serif;
+
+  .houseIcon {
+    width: 6rem;
+    fill: currentColor;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+  }
+
+  .houseName {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin: 1rem 0;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  .houseTraits {
+    font-weight: 100;
+    font-variant: small-caps;
+    margin: 1rem 0;
+    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
+    text-transform: lowercase;
+  }
+
+  .quote {
+    margin: 2rem auto;
+    max-width: 16rem;
+
+    h2 {
+      font-style: italic;
+      font-variant: small-caps;
+      font-size: large;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: lighter;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+      font-variant: small-caps;
+    }
+
+    h2::before {
+      content: '“';
+    }
+
+    h2::after {
+      margin-top: 2rem;
+      content: '”';
+    }
+
+    h2::before,
+    h2::after {
+      display: inline-block;
+      width: 100%;
+      font-style: normal;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 3.75rem;
+      line-height: 1;
+    }
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 200px;
+    background: -webkit-linear-gradient(
+      bottom,
+      rgba(13, 13, 55, 0) 0%,
+      #000000 100%
+    );
+    position: absolute;
+    top: 0;
+  }
+}
+
+.founderSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  .founderCard {
+    max-width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+
+    img {
+      max-height: 50vh;
+      margin: auto;
+      transition: all 0.5s ease-out;
+    }
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 35vh;
+  }
+
+  h1 {
+    font-family: 'Texturina', serif;
+    font-size: large;
+    font-weight: lighter;
+  }
+
+  .dropcap {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 0.5rem;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 200px;
+    background: -webkit-linear-gradient(
+      top,
+      rgba(13, 13, 55, 0) 0%,
+      #000000 100%
+    );
+    position: absolute;
+    left: 0;
+    bottom: -100vh;
+  }
+}
+
+#slytherin {
+  background-image: url('../images/slytherin.png');
+
+  .quote h2,
+  .quote h3,
+  .dropcap {
+    color: $green;
+  }
+}
+
+#ravenclaw {
+  background-image: url('../images/ravenclaw.png');
+
+  .quote h2,
+  .quote h3,
+  .dropcap {
+    color: $blue;
+  }
+}
+
+#gryffindor {
+  background-image: url('../images/gryffindor.png');
+
+  .quote h2,
+  .quote h3,
+  .dropcap {
+    color: $red;
+  }
+}
+
+#hufflepuff {
+  background-image: url('../images/hufflepuff.png');
+
+  .quote h2,
+  .quote h3,
+  .dropcap {
+    color: $yellow;
+  }
+}
+
+@media (min-width: 1024px) {
+  .founderSection {
+    flex-direction: row;
+    padding: 8rem 16rem;
+
+    .dropcap {
+      font-size: 4rem;
+    }
+
+    .founderData {
+      margin: 2rem;
+      text-align: left;
+
+      h1 {
+        text-align: left;
+        font-size: x-large;
+        padding: 1rem;
+      }
+    }
+
+    .container {
+      min-height: 40vh;
+    }
+  }
+}

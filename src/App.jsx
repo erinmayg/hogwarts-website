@@ -6,7 +6,7 @@ import HogwartsInfo from './components/HogwartsInfo';
 function App() {
   return (
     <div className='App page'>
-      {/* <Hogwarts /> */}
+      <Hogwarts />
       <HogwartsInfo />
       <HogwartsHouses />
     </div>
