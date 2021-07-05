@@ -24,7 +24,7 @@ function HogwartsHouse(props) {
         start: 'center 40%',
         toggleActions: 'restart none none reverse pause',
         scroller: '#' + props.house.house,
-        markers: true,
+        // markers: true,
       },
     });
 
