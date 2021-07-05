@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hogwarts-website/static/css/main.a5e57710.chunk.css",
-    "main.js": "/hogwarts-website/static/js/main.e552bbfc.chunk.js",
-    "main.js.map": "/hogwarts-website/static/js/main.e552bbfc.chunk.js.map",
+    "main.js": "/hogwarts-website/static/js/main.cc526994.chunk.js",
+    "main.js.map": "/hogwarts-website/static/js/main.cc526994.chunk.js.map",
     "runtime-main.js": "/hogwarts-website/static/js/runtime-main.4050b81c.js",
     "runtime-main.js.map": "/hogwarts-website/static/js/runtime-main.4050b81c.js.map",
     "static/js/2.6cb63b08.chunk.js": "/hogwarts-website/static/js/2.6cb63b08.chunk.js",
@@ -41,6 +41,6 @@
     "static/js/runtime-main.4050b81c.js",
     "static/js/2.6cb63b08.chunk.js",
     "static/css/main.a5e57710.chunk.css",
-    "static/js/main.e552bbfc.chunk.js"
+    "static/js/main.cc526994.chunk.js"
   ]
 }
